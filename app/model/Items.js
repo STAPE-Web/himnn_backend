@@ -30,7 +30,7 @@ async function deleteItems(id) {
 
 async function updateItems(id, data) {
     const docRef = db.collection("items").doc(id)
-    await docRef.update({ ...data });
+    await docRef.update(data.data);
 }
 
 module.exports = { getItemsById, createItems, deleteItems, getAllItemss, updateItems }

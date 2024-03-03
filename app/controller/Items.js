@@ -34,7 +34,7 @@ class ItemsController {
 
     async delete(req, res) {
         try {
-            const id = req.params["id"]
+            const { id } = req.query
             const data = await ItemsService.delete(id)
 
             res.json(data)
