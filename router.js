@@ -3,6 +3,7 @@ const Filter = require("./app/controller/Filter.js")
 const Catalog = require("./app/controller/Catalog.js")
 const Categories = require("./app/controller/Categories.js")
 const Items = require("./app/controller/Items.js")
+const { CreateOrder } = require("./app/controller/Checkout.js")
 
 const router = new Router()
 
@@ -30,6 +31,6 @@ router.get('/items', Items.getAll)
 router.delete('/items', Items.delete)
 router.put('/items', Items.update)
 
-// Checkout
+router.post('/checkout', CreateOrder)
 
 module.exports = router
