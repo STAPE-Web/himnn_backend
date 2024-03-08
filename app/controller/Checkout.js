@@ -41,4 +41,16 @@ async function CreateOrder(req, _) {
     await bot.sendMessage(-4163852678, message, { parse_mode: "Markdown" })
 }
 
-module.exports = { CreateOrder }
+async function Call(req, _) {
+    const data = req.body
+
+    let message = `*Запрос звонка с сайта:*
+    *Ф.И.О.:* ${data.data.fullName}
+    *Email:* ${data.data.email}
+    *Номер телефона:* ${data.data.tel}`
+
+    const bot = new TelegramBot("6889013345:AAHMIZZJNqZdfnFwfOvWq2K1fk1_tzFC5OQ");
+    await bot.sendMessage(-4163852678, message, { parse_mode: "Markdown" })
+}
+
+module.exports = { CreateOrder, Call }
