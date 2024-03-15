@@ -4,6 +4,7 @@ const Catalog = require("./app/controller/Catalog.js")
 const Categories = require("./app/controller/Categories.js")
 const Items = require("./app/controller/Items.js")
 const { CreateOrder, Call } = require("./app/controller/Checkout.js")
+const { SendMail } = require("./app/controller/Mail.js")
 
 const router = new Router()
 
@@ -33,5 +34,6 @@ router.put('/items', Items.update)
 
 router.post('/checkout', CreateOrder)
 router.post('/call', Call)
+router.post('/mail', SendMail)
 
 module.exports = router
