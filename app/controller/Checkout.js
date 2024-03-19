@@ -38,7 +38,7 @@ async function CreateOrder(req, _) {
     }
 
     const bot = new TelegramBot("6889013345:AAHMIZZJNqZdfnFwfOvWq2K1fk1_tzFC5OQ");
-    await bot.sendMessage(-4163852678, message, { parse_mode: "Markdown" })
+    await bot.sendMessage(-1002102733350, message, { parse_mode: "Markdown" })
 }
 
 async function Call(req, _) {
@@ -50,7 +50,7 @@ async function Call(req, _) {
     *Номер телефона:* ${data.data.tel}`
 
     const bot = new TelegramBot("6889013345:AAHMIZZJNqZdfnFwfOvWq2K1fk1_tzFC5OQ");
-    await bot.sendMessage(-4163852678, message, { parse_mode: "Markdown" })
+    await bot.sendMessage(-1002102733350, message, { parse_mode: "Markdown" })
 }
 
 module.exports = { CreateOrder, Call }
